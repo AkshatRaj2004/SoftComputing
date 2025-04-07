@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.15 5.85l-3.3-3.3a1.49 1.49 0 0 0-2.12 0l-9.9 9.9a1.49 1.49 0 0 0 0 2.12l3.3 3.3a1.49 1.49 0 0 0 2.12 0l9.9-9.9a1.49 1.49 0 0 0 0-2.12z"></path>
+                        <path d="M14.5 17.5L3 6"></path>
+                        <line x1="9.5" y1="12.5" x2="14.5" y2="17.5"></line>
+                    </svg>
+                </div>
+                <h1>Sentiment Analysis Dashboard</h1>
+            </div>
+
+            <!-- Main Content -->
+            <div class="input-section">
+                <label for="text-input">Enter text for analysis</label>
+                <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+                <button id="analyze-btn">Analyze Sentiment</button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results hidden">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Analysis Results
+                </h2>
+                <div class="result-content">
+                    <div id="positive-result" class="sentiment-result hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                        <span>Positive Sentiment</span>
+                    </div>
+                    <div id="negative-result" class="sentiment-result hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path>
+                        </svg>
+                        <span>Negative Sentiment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
